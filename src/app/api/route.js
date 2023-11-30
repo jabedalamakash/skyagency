@@ -1,16 +1,15 @@
 import { NextResponse } from "next/server";
 
 export async function POST(req,res){
-    const data= await req.json()
+    const finalData= await req.json()
 
-    
+
     const options={
         method:"POST",
-        body:JSON.stringify(data)
+        body:JSON.stringify(finalData)
       }
-      let res = await fetch("https://agency.teamrabbil.com/api/CreateContact",options)
-      let resData= await res.json()
-    //   return resData;
-      console.log(resData)
-      return NextResponse.json({status:"success",data:resData})
+      let result = await fetch("https://agency.teamrabbil.com/api/CreateContact",options)
+      let mainData= await result.json()
+    //   console.log(resData)
+      return NextResponse.json({status:"success",data:mainData})
 }
