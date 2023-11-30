@@ -8,7 +8,6 @@ export default  function page() {
     <main>
       <BreakCrumb title="Testimonials"/>
         <Testmonial/>
-        <Works/>
         <Contact/>
     </main>
   )

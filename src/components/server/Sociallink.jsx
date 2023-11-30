@@ -1,14 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/* eslint-disable */
-// const fetchDataa= async ()=>{
-//     const reqData = await fetch("https://agency.teamrabbil.com/api/SocialLink")
-//     const resData= await reqData.json()
-//     console.log(resData);
-//     return resData;
- 
-//    }
+
 export default async function Sociallink() {
 
   const socialList=[
@@ -26,7 +19,7 @@ export default async function Sociallink() {
 
       {socialList.map((item)=>{
         return <div key={item.id}>
-          <Link href={item.link}>
+          <Link target="_blank" href={item.link}>
             <Image
             src={item.img}
             height={100}

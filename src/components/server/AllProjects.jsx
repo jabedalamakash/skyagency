@@ -9,7 +9,7 @@ export default async function AllProjects() {
   const data = await fetchData();
   // console.log(data)
   return (
-    <section className="w-full">
+    <section className="w-full py-20">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
         <h3 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
           All Projects

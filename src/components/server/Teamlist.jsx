@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const fetchData = async () => {
   const reqData = await fetch("https://agency.teamrabbil.com/api/TeamList");
-  const resData = reqData.json();
+  const resData = await reqData.json();
   //  console.log(resData);
   return resData;
 };
@@ -14,7 +14,7 @@ const fetchData = async () => {
 export default async function Teamlist() {
   const data = await fetchData();
   return (
-    <section className="w-full">
+    <section className="w-full py-20">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
         <h3 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
           Our Team Members
@@ -23,7 +23,7 @@ export default async function Teamlist() {
           Check our awosome team members{" "}
         </h1>
 
-        <div className="flex flex-col md:flex-row gap-10 justify-between py-10 ">
+        <div className="flex flex-col md:flex-row md:gap-10 justify-between py-10 ">
           {data.map((item) => {
             return (
               <div key={item.id}>
@@ -31,7 +31,6 @@ export default async function Teamlist() {
                   <Image
                     src={item.image}
                     alt={item.name}
-                    // placeholder="blur"
                     height={500}
                     width={500}
                     priority

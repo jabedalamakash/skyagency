@@ -8,9 +8,9 @@ import Works from '@/components/server/Works'
 export default function Home() {
   return (
   <main>
-    <HeroSec/>
-    <Brands/>
-   
+    <HeroSec/>  
+    {/* <Brands/>  */}
+     
     <Works/>
     <Stats/>
     <Featured/>

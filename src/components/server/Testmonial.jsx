@@ -11,7 +11,7 @@ const fetchData = async () => {
 export default async function Testmonial() {
   const data = await fetchData();
   return (
-    <section className="w-full">
+    <section className="w-full py-20">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
         <h3 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
           Testimonial List
@@ -19,7 +19,7 @@ export default async function Testmonial() {
         <h1 className="text-2xl pb-10 font-bold">
           Better Agency/SEO Solution AT Your Fingertips
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10">
           {data.map((item) => {
             return (
               <div key={item.id} className="">

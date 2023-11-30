@@ -12,7 +12,7 @@ export default function NavBar() {
     {id:5,title:"Testimonials",path:"/testimonials"}
   ]
   return (
-    <section className="w-full">
+    <section className="w-full bg-transparent">
 
       <main className="flex flex-col flex-wrap md:flex-row items-center justify-between py-10 w-full md:w-[80%] mx-auto">
 

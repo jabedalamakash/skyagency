@@ -10,7 +10,7 @@ const fetchDataService = async () => {
 export default async function Services() {
   const data = await fetchDataService();
   return (
-    <section className="w-full ">
+    <section className="w-full py-20 ">
       <article className="w-full md:w-[80%] mx-auto py-20 px-5 md:px-0">
         <h1 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
           Our All Services
@@ -19,7 +19,7 @@ export default async function Services() {
           We Provide Best Web Design Services
         </h1>
         {/* <p>We strive to create an inclusive and diverse business that solves real problems for people.</p> */}
-        <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <main className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {data.map((item) => {
             return (
               <div key={item.id} className="bg-white shadow-xl border border-gray-300 rounded-xl p-10">

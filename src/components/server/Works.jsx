@@ -2,28 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const fetchData=async ()=>{
-    const reqData = await fetch("https://agency.teamrabbil.com/api/WorkList")
-    const resData= reqData.json()
-    return resData;
-    
-   }
+const fetchData = async () => {
+  const reqData = await fetch("https://agency.teamrabbil.com/api/WorkList");
+  const resData = await reqData.json();
+  return resData;
+};
 
 export default async function Works() {
- const data = await fetchData()
- const imgs = [
-   { id: 1, img: "/icons/activity.png",alt: "activity"},
-   { id: 2, img: "/icons/heart.png" ,alt: "heart"},
-   { id: 3, img: "/icons/work.png",alt: "work"},
- ];
-//  console.log(data);
+  const data = await fetchData();
+  //  console.log(data);
   return (
-    <section className="w-full">
-    <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
-    <h5 className="uppercase  text-[#20B15A] pb-5 text-xl font-semibold">Worklist</h5>
-    <h1 className="capitalize font-bold text-2xl mb-10 ">we provide the perfect solution to your business growth </h1>
-    <div className="flex flex-col gap-5 space-y-5 md:space-y-0 md:flex-row md:justify-between">
-
+    <section className="w-full py-20">
+      <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
+        <h5 className="uppercase  text-[#20B15A] pb-5 text-xl font-semibold">
+          Worklist
+        </h5>
+        <h1 className="capitalize font-bold text-2xl mb-10 ">
+          we provide the perfect solution to your business growth{" "}
+        </h1>
+        <div className="flex flex-col md:gap-10 space-y-5 md:space-y-0 md:flex-row md:justify-between">
           <div className="bg-white shadow-xl border  p-10 md:px-20 md:py-10   rounded-xl">
             <Image
               src={"/icons/activity.png"}
@@ -32,18 +29,18 @@ export default async function Works() {
               alt={"happy"}
               className="bg-[#D7F5DC] mx-auto rounded-xl mb-5 p-10"
             />
-            <p className="text-center sm:text-left text-2xl mb-3   font-bold">
+            <p className="text-center sm:text-left text-2xl mb-3 font-bold">
               {data[0].title}
             </p>
-            <p className="text-center sm:text-left mb-3 text-gray-500">{data[0].des}</p>
+            <p className="text-center sm:text-left mb-3 text-gray-500">
+              {data[0].des}
+            </p>
 
             <div className="inline-flex items-center gap-3">
-            <Link href={"/"}>Learn More </Link>
-            <FaArrowRightLong /> 
+              <Link target="_blank" href={"/"}>Learn More </Link>
+              <FaArrowRightLong />
             </div>
-
           </div>
-
 
           <div className="bg-white shadow-xl border  p-10 md:px-20 md:py-10 rounded-xl">
             <Image
@@ -56,13 +53,14 @@ export default async function Works() {
             <p className="text-center sm:text-left text-2xl mb-3  font-bold">
               {data[1].title}
             </p>
-            <p className="text-center sm:text-left mb-3 text-gray-500">{data[1].des}</p>
+            <p className="text-center sm:text-left mb-3 text-gray-500">
+              {data[1].des}
+            </p>
 
-            <div className="inline-flex items-center gap-3">
-            <Link href={"/"}>Learn More </Link>
-            <FaArrowRightLong /> 
+            <div className="inline-flex justify-center md:justify-start  items-center gap-3">
+              <Link href={"/"} className="mx-auto md:mx-0">Learn More </Link>
+              <FaArrowRightLong />
             </div>
-
           </div>
 
           <div className="bg-white shadow-xl border  p-10 md:px-20 md:py-10  rounded-xl">
@@ -76,16 +74,19 @@ export default async function Works() {
             <p className="text-center sm:text-left text-2xl mb-3 font-bold">
               {data[2].title}
             </p>
-            <p className=" text-center sm:text-left mb-3 text-gray-500">{data[2].des}</p>
+            <p className=" text-center sm:text-left mb-3 text-gray-500">
+              {data[2].des}
+            </p>
             <div className="inline-flex items-center gap-3">
-            <Link href={"/"}>Learn More </Link>
-            <FaArrowRightLong /> 
+              <Link href={"/"}>Learn More </Link>
+              <div className="mx-auto">
+              <FaArrowRightLong />
+              </div>
+              
             </div>
-            
           </div>
         </div>
-
-    </main>
+      </main>
     </section>
-  )
+  );
 }

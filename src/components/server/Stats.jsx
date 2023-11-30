@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const fetchData = async () => {
   const reqData = await fetch("https://agency.teamrabbil.com/api/StatList");
-  const resData = reqData.json();
+  const resData = await reqData.json();
   //  console.log(resData);
   return resData;
 };

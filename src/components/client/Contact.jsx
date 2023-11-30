@@ -5,17 +5,53 @@
 //    }
 "use client"
 
+import { useState } from "react"
+
 export default function Contact() {
+
+  const obj={
+    email: " ",
+  }
+  const [data,setData] =useState({...obj});
+
+  // const handleChange =(e)=>{
+  //   setEmail({...obj,[e.target.name]:e.target.value,})
+  // }
+  const handleChange =(key,value)=>{
+    setData({
+      ...data,
+      [key]:value
+    })
+    
+  }
+
+  const handleSubmit=async()=>{
+    // e.preventDefault()
+    // setData({
+    
+    // })
+    const options={
+      method:"POST",
+      body:JSON.stringify(data)
+    }
+    let res= await fetch("api/create",options)
+    let resData= await res.json()
+    console.log(resData)
+
+
+  }
   
   return (
-      <section className="w-full">
+      <section className="w-full py-20">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
       <h5 className="uppercase text-center text-[#20B15A] pb-5 text-xl font-semibold">Subscribe</h5>
       <h1 className="capitalize text-2xl mb-3 text-center">subscribe to get the latest news about us</h1>
       <p className="capitalize pb-10 text-gray-500 text-center">please drop your email below to get daily update what we do</p>
       <div className=" text-center  mx-auto">
-      <input type="email" className="p-4 w-1/3  border-2 border-gray-500 rounded-xl" placeholder="Enter Your Email"/>
-      <button className="bg-[#F55F1D]  text-center px-3 py-2 z-10 rounded-xl  text-white">Subscribe</button>
+      <input type="email"
+      onChange={(e)=>{handleChange("email",e.target.value)}}
+       className="p-4 w-1/3  border-2 border-gray-500 rounded-xl" placeholder="Enter Your Email"/>
+      <button onClick={handleSubmit} className="bg-[#F55F1D]  text-center px-3 py-2 z-10 rounded-xl  text-white">Subscribe</button>
 
       </div>
   
