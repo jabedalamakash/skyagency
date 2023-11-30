@@ -9,11 +9,13 @@ export default function Home() {
   return (
   <main>
     <HeroSec/>
-    <Stats/>
+    <Brands/>
+   
     <Works/>
+    <Stats/>
     <Featured/>
     <Contact/>
-    <Brands/>
+    
     
   </main>
   )

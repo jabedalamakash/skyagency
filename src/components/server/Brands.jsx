@@ -1,7 +1,8 @@
 
 const fetchData=async ()=>{
-    const reqData = await fetchData("https://agency.teamrabbil.com/api/BrandList")
+    const reqData = await fetch("https://agency.teamrabbil.com/api/BrandList")
     const resData=reqData.json()
+    return resData;
     console.log(resData);
    }
 

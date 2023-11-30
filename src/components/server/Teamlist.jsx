@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const fetchData = async () => {
   const reqData = await fetch("https://agency.teamrabbil.com/api/TeamList");
-  const resData = await reqData.json();
+  const resData = reqData.json();
   //  console.log(resData);
   return resData;
 };
@@ -16,9 +16,9 @@ export default async function Teamlist() {
   return (
     <section className="w-full">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
-        <h1 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
+        <h3 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
           Our Team Members
-        </h1>
+        </h3>
         <h1 className="text-2xl pb-10 font-bold">
           Check our awosome team members{" "}
         </h1>

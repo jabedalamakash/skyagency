@@ -10,8 +10,8 @@ const fetchDataService = async () => {
 export default async function Services() {
   const data = await fetchDataService();
   return (
-    <section className="w-full">
-      <article className="w-full md:w-[80%] mx-auto px-5 md:px-0">
+    <section className="w-full ">
+      <article className="w-full md:w-[80%] mx-auto py-20 px-5 md:px-0">
         <h1 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
           Our All Services
         </h1>
@@ -22,12 +22,12 @@ export default async function Services() {
         <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {data.map((item) => {
             return (
-              <div key={item.id} className="bg-white shadow-xl rounded-xl p-10">
+              <div key={item.id} className="bg-white shadow-xl border border-gray-300 rounded-xl p-10">
                 {/* <div className="gap-10 "> */}
                 <h1 className="uppercase font-semibold text-2xl py-5">
                   {item.title}
                 </h1>
-                <p className="pb-5">{item.des}</p>
+                <p className="pb-5 text-gray-500">{item.des}</p>
                 <div className=" w-full flex-wrap flex">
                   <div className="flex gap-5  py-5">
                     <div className="w-[65%]">
