@@ -16,10 +16,10 @@ export default async function Teamlist() {
   return (
     <section className="w-full py-20">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
-        <h3 className="uppercase text-[#20B15A] pb-5 text-xl font-semibold">
+        <h3 className="uppercase text-[#20B15A] text-center md:text-left pb-5 text-xl font-semibold">
           Our Team Members
         </h3>
-        <h1 className="text-2xl pb-10 font-bold">
+        <h1 className="text-2xl text-center md:text-left pb-10 font-bold">
           Check our awosome team members{" "}
         </h1>
 

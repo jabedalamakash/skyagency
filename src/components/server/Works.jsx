@@ -14,10 +14,10 @@ export default async function Works() {
   return (
     <section className="w-full py-20">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
-        <h5 className="uppercase  text-[#20B15A] pb-5 text-xl font-semibold">
+        <h5 className="uppercase  text-[#20B15A] text-center md:text-left pb-5 text-xl font-semibold">
          worklist
         </h5>
-        <h1 className="capitalize font-bold text-2xl mb-10 ">
+        <h1 className="capitalize font-bold text-center md:text-left text-2xl mb-10 ">
           we provide the perfect solution to your business growth{" "}
         </h1>
         <div className="flex flex-col md:gap-10 space-y-5 md:space-y-0 md:flex-row md:justify-between">
