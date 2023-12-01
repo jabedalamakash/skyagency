@@ -36,11 +36,9 @@ export default async function Teamlist() {
                     priority
                     className=" w-full h-full"
                   />
-
-                  <h3 className=" text-center py-3 font-bold">{item.name}</h3>
-                  <div className=" flex justify-center mb-5 gap-5 items-center bg-white p-3 rounded-l-full  rounded-r-full ">
-                    
-                    <Link href={`https://${item.facebook}`}>
+                     <div className=" flex z-10 justify-center mb-5 gap-5 items-center -mt-24  p-3  ">
+                    <div className=" inline-flex px-5 py-3 space-x-6 rounded-l-full bg-white rounded-r-full">
+                    <Link href={`https://${item.facebook}`} >
                     <FaFacebookF size={15} />
                     </Link>
                     <Link href={`https://${item.twiter}`}>
@@ -49,9 +47,13 @@ export default async function Teamlist() {
                     <Link href={`https://${item.instagram}`}>
                     <FaInstagram size={15} />
                     </Link>
+                    </div>
                     
                     
                   </div>
+
+                  <h3 className=" text-center py-5  font-bold">{item.name}</h3>
+
                 </div>
               </div>
             );
