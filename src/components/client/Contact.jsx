@@ -1,8 +1,3 @@
-// const fetchData=async ()=>{
-//     const reqData = await fetchData("https://agency.teamrabbil.com/api/CreateContact")
-//     const resData=reqData.json()
-//     console.log(resData);
-//    }
 "use client";
 
 import { useState } from "react";
@@ -13,9 +8,6 @@ export default function Contact() {
   };
   const [data, setData] = useState({ ...obj });
 
-  // const handleChange =(e)=>{
-  //   setEmail({...obj,[e.target.name]:e.target.value,})
-  // }
   const handleChange = (key, value) => {
     setData({
       ...data,
@@ -23,18 +15,19 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = async () => {
-    // e.preventDefault()
-    // setData({
-
-    // })
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setData("");
     const options = {
       method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
       body: JSON.stringify(data),
     };
-    let res = await fetch("api/create", options);
-    let resData = await res.json();
-    console.log(resData);
+
+    let response = await fetch("/api/create", options);
+    let resData = await response.json();
   };
 
   return (
