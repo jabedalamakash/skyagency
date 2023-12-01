@@ -31,7 +31,7 @@ export default async function AllProjects() {
                     priority
                     className=" w-full h-full rounded-xl mb-5"
                   />
-                  <h4 className="uppercase font-semibold text-2xl">
+                  <h4 className="uppercase text-center md:text-left font-semibold text-2xl">
                     {item.title}
                   </h4>
                 </div>

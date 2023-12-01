@@ -15,13 +15,13 @@ export default async function Works() {
     <section className="w-full py-20">
       <main className="w-full md:w-[80%] mx-auto px-5 md:px-0">
         <h5 className="uppercase  text-[#20B15A] pb-5 text-xl font-semibold">
-          Worklist
+         worklist
         </h5>
         <h1 className="capitalize font-bold text-2xl mb-10 ">
           we provide the perfect solution to your business growth{" "}
         </h1>
         <div className="flex flex-col md:gap-10 space-y-5 md:space-y-0 md:flex-row md:justify-between">
-          <div className="bg-white shadow-xl border  p-10 md:px-20 md:py-10   rounded-xl">
+          <div className="bg-white shadow-xl border p-10 md:px-20 md:py-10   rounded-xl">
             <Image
               src={"/icons/activity.png"}
               height={100}
@@ -36,7 +36,7 @@ export default async function Works() {
               {data[0].des}
             </p>
 
-            <div className="inline-flex items-center gap-3">
+            <div className=" flex items-center justify-center md:justify-start gap-3">
               <Link target="_blank" href={"/"}>Learn More </Link>
               <FaArrowRightLong />
             </div>
@@ -57,8 +57,8 @@ export default async function Works() {
               {data[1].des}
             </p>
 
-            <div className="inline-flex justify-center md:justify-start  items-center gap-3">
-              <Link href={"/"} className="mx-auto md:mx-0">Learn More </Link>
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <Link href={"/"}>Learn More </Link>
               <FaArrowRightLong />
             </div>
           </div>
@@ -77,12 +77,9 @@ export default async function Works() {
             <p className=" text-center sm:text-left mb-3 text-gray-500">
               {data[2].des}
             </p>
-            <div className="inline-flex items-center gap-3">
-              <Link href={"/"}>Learn More </Link>
-              <div className="mx-auto">
-              <FaArrowRightLong />
-              </div>
-              
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <Link href={"/"}>Learn More </Link>           
+              <FaArrowRightLong />            
             </div>
           </div>
         </div>
