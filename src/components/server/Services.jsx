@@ -23,10 +23,10 @@ export default async function Services() {
             return (
               <div key={item.id} className="bg-white shadow-xl border border-gray-300 rounded-xl p-10">
                 {/* <div className="gap-10 "> */}
-                <h1 className="uppercase font-semibold text-2xl py-5">
+                <h1 className="uppercase text-center md:text-left font-semibold text-2xl py-5">
                   {item.title}
                 </h1>
-                <p className="pb-5 text-gray-500">{item.des}</p>
+                <p className="pb-5 text-center md:text-left text-gray-500">{item.des}</p>
                 <div className=" w-full flex-wrap flex">
                   <div className="flex gap-5  py-5">
                     <div className="w-[65%]">
