@@ -6,7 +6,9 @@ import Services from "@/components/server/Services";
 export default function page() {
   return (
     <main>
-    <BreakCrumb title="Service"/>
+     
+      <BreakCrumb title="Service"/>
+    
     <Services/>
     <Contact/>
     </main>

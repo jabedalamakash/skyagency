@@ -7,7 +7,7 @@ export default function BreakCrumb({title}) {
  const path=usePathname();
 
   return (
-    <section className="w-full bg-[#F8F9FC]">
+    <section className="w-full bg-[#F8F9FC] mt-48 md:mt-32 ">
         <main className="w-full md:w-[80%] mx-auto px-5 md:px-0 py-20">
         <h1 className="font-semibold text-2xl mb-5">{title}</h1>    
         <div aria-label="breadcrumb" className=" inline-flex items-center " >

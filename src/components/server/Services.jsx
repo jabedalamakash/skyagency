@@ -10,7 +10,7 @@ const fetchDataService = async () => {
 export default async function Services() {
   const data = await fetchDataService();
   return (
-    <section className="w-full py-20 ">
+    <section className="w-full py-20">
       <article className="w-full md:w-[80%] mx-auto py-20 px-5 md:px-0">
         <h1 className="uppercase text-[#20B15A] text-center md:text-left pb-5 text-xl font-semibold">
           Our All Services

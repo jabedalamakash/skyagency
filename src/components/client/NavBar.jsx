@@ -12,9 +12,9 @@ export default function NavBar() {
     {id:5,title:"Testimonials",path:"/testimonials"}
   ]
   return (
-    <section className="w-full bg-transparent">
+    <section className="w-full bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-30 fixed top-0 z-50">
 
-      <main className="flex flex-col flex-wrap md:flex-row items-center justify-between py-10 w-full md:w-[80%] mx-auto">
+      <main className="flex flex-col flex-wrap md:flex-row items-center justify-between py-20 w-full md:w-[80%] mx-auto">
 
      <div className="pb-5 md:pb-0">
       <Link href={"/"}>
@@ -30,14 +30,14 @@ export default function NavBar() {
       {
         navList.map((item)=>{
           return <nav key={item.id}>
-            <Link href={item.path} className="text-black">{item.title}</Link>
+            <Link href={item.path} className="text-black font-semibold">{item.title}</Link>
           </nav>
 
         })
       }
         <div className="flex gap-5">
-        <button className="px-3 py-2 border bg-transparent rounded-md border-[#20B15A]">Log in</button>
-        <button className="px-3 py-2 bg-[#20B15A] border text-white border-[#20B15A] rounded-md">Register</button>
+        <button className="px-3 py-2 border bg-transparent rounded-md font-semibold border-[#20B15A]">Log in</button>
+        <button className="px-3 py-2 bg-[#20B15A] border font-semibold text-white border-[#20B15A] rounded-md">Register</button>
       </div>
       </div>
 

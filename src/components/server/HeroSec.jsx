@@ -11,10 +11,10 @@ const fetchData = async () => {
 export default async function HeroSec() {
   const data = await fetchData();
   return (
-    <section className="w-full bg-[#D7F5DC] py-20">
+    <section className="w-full bg-[#D7F5DC]  py-20">
       <main className="w-full md:w-[80%]  mx-auto px-5 md:px-0">
 
-        <div className="flex flex-col-reverse md:flex-row mb-5 md:mb-0 md:space-x-14 ">
+        <div className="flex flex-col-reverse md:flex-row mb-5 mt-48 md:mt-32 md:mb-0 md:space-x-14 ">
 
           <div className="w-full md:w-1/2  mx-auto md:my-auto items-center">
             <h1 className="font-bold text-center md:text-left text-3xl  md:text-6xl md:leading-relaxed mb-3">Increase Your Customers Loyalty and Satisfaction</h1>

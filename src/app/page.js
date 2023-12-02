@@ -7,8 +7,11 @@ import Works from '@/components/server/Works'
 
 export default function Home() {
   return (
-  <main>
+  <main className=''>
+    {/* <div className=''> */}
     <HeroSec/>  
+    {/* </div> */}
+    
     {/* <Brands/>  */}
      
     <Works/>
