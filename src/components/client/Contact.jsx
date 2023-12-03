@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from 'react-hot-toast';
 
 export default function Contact() {
   const obj = {
-    email: " ",
+    email: "",
   };
   const [data, setData] = useState({ ...obj });
 
@@ -17,12 +17,23 @@ export default function Contact() {
   };
 
 
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-   
      setData(obj);
-    toast.success("Thanks for subscribing");
+     if(data.email.length >= 5) {
+      toast.success("Thanks for subscribing");
+     }
+     else{
+      toast.error('input field required!');
+     }
+
+    //  console.log(data.email.length)
+
+    
     const options = {
       method: "POST",
       headers: {
