@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const obj = {
@@ -15,9 +16,13 @@ export default function Contact() {
     });
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setData("");
+    
+   
+     setData(obj);
+    toast.success("Thanks for subscribing");
     const options = {
       method: "POST",
       headers: {
@@ -43,7 +48,7 @@ export default function Contact() {
           please drop your email below to get daily update what we do
         </p>
         <div className=" text-center  mx-auto">
-          <input
+          <input required
             type="email"
             onChange={(e) => {
               handleChange("email", e.target.value);
