@@ -7,7 +7,7 @@ export default function Contact() {
   const obj = {
     email: "",
   };
-  const [data, setData] = useState({ ...obj });
+  const [data, setData] = useState({obj});
 
   const handleChange = (key, value) => {
     setData({
@@ -21,30 +21,32 @@ export default function Contact() {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     
      setData(obj);
      if(data.email.length >= 5) {
       toast.success("Thanks for subscribing");
-     }
-     else{
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      };
+  
+      let response = await fetch("/api/create", options);
+      let resData = await response.json();
+    }
+    else {
       toast.error('input field required!');
      }
+     }
+ 
 
     //  console.log(data.email.length)
 
     
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    };
 
-    let response = await fetch("/api/create", options);
-    let resData = await response.json();
-  };
 
   return (
     <section className="w-full py-20">
