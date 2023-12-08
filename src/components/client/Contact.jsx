@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import toast from 'react-hot-toast';
 
 export default function Contact() {
   const obj = {
     email: "",
   };
-  const [data, setData] = useState({obj});
+  const [data, setData] = useState({...obj});
+ 
 
   const handleChange = (key, value) => {
     setData({
@@ -21,9 +22,8 @@ export default function Contact() {
 
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-    
-     setData(obj);
+     e.preventDefault();
+  
      if(data.email.length >= 5) {
       toast.success("Thanks for subscribing");
       const options = {
@@ -36,6 +36,8 @@ export default function Contact() {
   
       let response = await fetch("/api/create", options);
       let resData = await response.json();
+        setData({...obj});
+
     }
     else {
       toast.error('input field required!');
@@ -43,7 +45,9 @@ export default function Contact() {
      }
  
 
-    //  console.log(data.email.length)
+     
+
+
 
     
 
@@ -60,22 +64,24 @@ export default function Contact() {
         <p className="capitalize pb-10 text-gray-500 text-center">
           please drop your email below to get daily update what we do
         </p>
-        <div className=" text-center  mx-auto">
-          <input required
+        <form onSubmit={handleSubmit} className=" text-center  mx-auto">
+          <input
             type="email"
+            value={data.email}
             onChange={(e) => {
               handleChange("email", e.target.value);
             }}
             className="p-4 w-full md:w-1/3 border-2 border-gray-500 focus:outline-none rounded-xl"
             placeholder="Enter Your Email"
+            required
           />
           <button
-            onClick={handleSubmit}
+            type="submit"
             className="bg-[#F55F1D] -ml-28 text-center px-3 py-3 z-10 rounded-xl  text-white"
           >
             Subscribe
           </button>
-        </div>
+        </form>
       </main>
     </section>
   );
