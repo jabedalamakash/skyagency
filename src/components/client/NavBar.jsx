@@ -23,7 +23,7 @@ export default function NavBar() {
       width={100}
       className="w-52"
       alt="logo" /> */}
-      <h1 className='font-bold text-3xl text-black'>Design<span className='text-[#F0682A]'>Agency</span></h1>
+      <h1 className='font-bold text-3xl text-black'>Sky<span className='text-[#F0682A]'>Agency</span></h1>
       </Link>
      </div>
    <div className="flex justify-center flex-wrap md:flex-nowrap  gap-5 items-center">

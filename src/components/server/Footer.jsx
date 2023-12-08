@@ -15,7 +15,7 @@ export default function Footer() {
         width={100}
         alt="logo"
         className='w-52 py-5 z-10'/> */}
-        <h1 className='font-bold text-3xl text-white'>Design<span className='text-[#F0682A]'>Agency</span></h1>
+        <h1 className='font-bold text-3xl text-white'>Sky<span className='text-[#F0682A]'>Agency</span></h1>
         <p className=' py-5 text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ipsam doloribus, voluptate inventore vel tenetur ducimus.</p>
       <Sociallink/>
       </div>
@@ -28,7 +28,7 @@ export default function Footer() {
       </div>
       <div className='py-5 md:py-0 space-y-4 w-full md:w-[40%]'>
         <h1 className='font-bold text-white text-xl'>Address</h1>
-        <p className=' text-white'>Design Agency Head Office,Airport Road, United Arab Emirates</p>
+        <p className=' text-white'>Sky Agency Head Office,Airport Road, United Arab Emirates</p>
       </div>
 
       </main>
