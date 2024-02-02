@@ -34,7 +34,7 @@ export default function Contact() {
         body: JSON.stringify(data),
       };
   
-      let response = await fetch("/api/create", options);
+      let response = await fetch("/api/subscribers", options);
       let resData = await response.json();
         setData({...obj});
 
